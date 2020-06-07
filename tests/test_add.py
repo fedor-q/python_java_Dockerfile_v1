@@ -1,5 +1,5 @@
+# test_add.py
 from src.calculator import add
-import pytest
 
 
 def test_add():
@@ -7,6 +7,6 @@ def test_add():
     assert result == 2
 
 
-def test_add_string():
-    with pytest.raises(TypeError):
-        add("Hello World!", 2)
+def test_add_failure():
+    result = add(1, 1)
+    assert result == 3
